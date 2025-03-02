@@ -1,45 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-</head>
-<body>
-    <header>
-        <h1>{{ site.title }}</h1>
-    </header>
+{% include head.html %} <!-- Optional if moving <head> to _includes -->
 
-    <main>
-        <!-- Persistent text from index.md -->
-        {{ content }}
+<main>
+    <!-- Persistent text from index.md -->
+    {{ content }}
 
-        <!-- Featured Post (Hardcoded) -->
-        <h2>Featured Post</h2>
-        {% assign featured_post = site.posts | where: "path", "_posts/2025-02-28-test-post.md" | first %}
-        {% if featured_post %}
-            <article>
-                <h3><a href="{{ featured_post.url }}">{{ featured_post.title }}</a></h3>
-                <p>{{ featured_post.content }}</p>
-            </article>
-        {% else %}
-            <p>Featured post not found.</p>
-        {% endif %}
+    <!-- Featured Post (Hardcoded) -->
+    <h2>Featured Post</h2>
+    {% assign featured_post = site.posts | where: "path", "_posts/2025-02-28-test-post.md" | first %}
+    {% if featured_post %}
+        <article>
+            <h3><a href="{{ featured_post.url }}">{{ featured_post.title }}</a></h3>
+            <p>{{ featured_post.content }}</p>
+        </article>
+    {% else %}
+        <p>Featured post not found.</p>
+    {% endif %}
 
-        <!-- Recent Posts List -->
-        <h2>Recent Posts</h2>
-        <ul>
-            {% for post in site.posts limit: 5 %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%B %d, %Y" }})
-                </li>
-            {% endfor %}
-        </ul>
-    </main>
-
-    <footer>
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-    </footer>
-</body>
-</html>
+    <!-- Recent Posts List -->
+    <h2>Recent Posts</h2>
+    <ul>
+        {% for post in site.posts limit: 5 %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%B %d, %Y" }})
+            </li>
+        {% endfor %}
+    </ul>
+</main>
