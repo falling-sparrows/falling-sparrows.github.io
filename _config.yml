@@ -4,6 +4,13 @@ baseurl: ""
 url: "https://falling-sparrows.github.io"
 markdown: kramdown
 
+# Layouts for types of pages
+---
+layout: default
+---
+
+<h1> Under Construction</h>
+
 # Enable categories
 collections:
   categories:
