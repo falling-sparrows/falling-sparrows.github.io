@@ -11,9 +11,22 @@
     </header>
 
     <main>
-        <!-- This inserts the content from index.md -->
+        <!-- Persistent text from index.md -->
         {{ content }}
 
+        <!-- Featured Post (Hardcoded) -->
+        <h2>Featured Post</h2>
+        {% assign featured_post = site.posts | where: "path", "_posts/2025-02-28-test-post.md" | first %}
+        {% if featured_post %}
+            <article>
+                <h3><a href="{{ featured_post.url }}">{{ featured_post.title }}</a></h3>
+                <p>{{ featured_post.content }}</p>
+            </article>
+        {% else %}
+            <p>Featured post not found.</p>
+        {% endif %}
+
+        <!-- Recent Posts List -->
         <h2>Recent Posts</h2>
         <ul>
             {% for post in site.posts limit: 5 %}
