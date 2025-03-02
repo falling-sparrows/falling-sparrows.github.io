@@ -1,9 +1,7 @@
-/* Change background color to light gray */
 body {
-    background-color: #1a1a1a; /* Dark gray */
-    color: #9F9F9F; /* Light gray for text */
-    font-family: 'IBM Plex Mono', Menlo, Consolas, 'Courier New', monospace;
+    font-family: "Georgia", "Times New Roman", serif;
     font-size: 18px;
-    line-height: 1.6;
-    
+    line-height: 1.7;
+    background-color: #FAFAFA; /* Light gray, not pure white */
+    color: #222222; /* Dark gray text */
 }
