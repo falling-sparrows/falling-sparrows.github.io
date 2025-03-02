@@ -3,4 +3,4 @@ layout: home
 title: "Welcome to My Blog"
 permalink: /
 --- 
-Test
+Test 2
