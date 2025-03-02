@@ -20,3 +20,4 @@ paginate_path: "/archive/page:num/"
 exclude:
   - README.md
   - LICENSE
+
