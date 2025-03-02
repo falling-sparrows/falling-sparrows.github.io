@@ -1,2 +1,22 @@
-theme: minima
+title: "Falling Sparrows"
+description: "Are not two sparrows sold for a penny? Yet not one of them will fall to the ground outside your Father's care."
+baseurl: ""
+url: "https://falling-sparrows.github.io"
 markdown: kramdown
+
+# Enable categories
+collections:
+  categories:
+    output: true
+
+# Permalink settings (forces posts into root URLs like /my-first-post/)
+permalink: /:title/
+
+# Enable pagination for archive page
+paginate: 10
+paginate_path: "/archive/page:num/"
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - LICENSE
