@@ -2,5 +2,8 @@
 body {
     background-color: #1a1a1a; /* Dark gray */
     color: #9F9F9F; /* Light gray for text */
+    font-family: 'IBM Plex Mono', Menlo, Consolas, 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.6;
     
 }
