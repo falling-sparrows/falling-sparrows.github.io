@@ -6,7 +6,7 @@ markdown: kramdown
 
 # Layouts for types of pages
 ---
-layout: default
+layout: home
 ---
 
 <h1>Under Construction</h1>
