@@ -1,4 +1,5 @@
 /* Change background color to light gray */
 body {
-    background-color: #f4f4f4;
+    /*background-color: #f4f4f4;*/
+    *background-color: #ff0000;
 }
